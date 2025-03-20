@@ -12,22 +12,46 @@
       <p data-aos="fade-up" data-aos-duration="1000" [innerHTML]='"Contact.Content" | translate'>
         {{ "Contact.Content" | translate }}
       </p>
+      <div class="d-none d-xxl-none  d-xl-none  d-lg-none  d-md-none d-sm-block ">
+        <ul class="d-flex align-items-center justify-content-center">
+          <li class="mx-2">
+            <a class="text-white-50" (click)='analyticsService.sendAnalyticEvent("click_facebook", "footer", "facebook")' href="https://www.facebook.com/share/NxCzVpAKWmxrvoYY/?mibextid=qi2Omg" target='_blank'>
+              <i style="font-size:1.6rem" class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li class="mx-2">
+            <a class="text-white-50" (click)='analyticsService.sendAnalyticEvent("click_whatsapp", "footer", "whatsapp")' href="https://wa.me/201553754198" target='_blank'>
+              <i style="font-size:1.6rem" class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+          <li class="mx-2">
+            <a class="text-white-50" (click)='analyticsService.sendAnalyticEvent("click_instagram", "footer", "instagram")' href="https://www.instagram.com/arch.mustafa.design?igsh=ZGU0a2xsd3VoMHF1" target='_blank'>
+              <i style="font-size:1.6rem" class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="mx-2">
+            <a class="text-white-50" (click)='analyticsService.sendAnalyticEvent("click_behance", "footer", "behance")' href="https://www.behance.net/engmusesmail?fbclid=PAAaag0mZa4Ltga44x1WM2c2GUxyHqH0TpzWkbrH4b_g3xxsrJMAUzCl5fJgk" target='_blank'>
+              <i style="font-size:1.6rem" class="fab fa-behance"></i>
+            </a>
+          </li>
+          <li class="mx-2">
+            <a class="text-white-50" (click)='analyticsService.sendAnalyticEvent("click_linkedin", "footer", "github")' href="https://www.linkedin.com/in/moesmail?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target='_blank'>
+              <i style="font-size:1.6rem" class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
       <div class="mt-5">
         <a
-          (click)="
-            analyticsService.sendAnalyticEvent(
-              'click_send_mail',
-              'contact',
-              'email'
-            )
-          "
-          href="https://wa.me/201553754198"
+          (click)='analyticsService.sendAnalyticEvent("click_send_mail", "footer", "email")'
+          href="mailto:esmailmustafa16@gmail.com"
           target="_blank"
           class="main-btn"
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          {{ "Banner.ActionBtn" | translate }}
+          {{ "Banner.MailMe" | translate }}
         </a>
       </div>
     </div>
