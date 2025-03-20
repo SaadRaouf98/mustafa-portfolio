@@ -9,7 +9,7 @@
           {{ "Contact.Title" | translate }}
         </h4>
       </div>
-      <p data-aos="fade-up" data-aos-duration="1000">
+      <p data-aos="fade-up" data-aos-duration="1000" [innerHTML]='"Contact.Content" | translate'>
         {{ "Contact.Content" | translate }}
       </p>
       <div class="mt-5">
@@ -27,7 +27,7 @@
           data-aos="fade-up"
           data-aos-duration="1000"
         >
-          {{ "Contact.Btn" | translate }}
+          {{ "Banner.ActionBtn" | translate }}
         </a>
       </div>
     </div>
